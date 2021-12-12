@@ -1,4 +1,4 @@
 # Proyecto-final-info
 Proyecto ONU 
 
-Comitten aca chicos no usen master  :D
+Comitteen aca chicos no usen master  :D
