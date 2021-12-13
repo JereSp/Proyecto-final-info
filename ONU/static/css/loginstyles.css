@@ -1,0 +1,29 @@
+body {
+    background-image: linear-gradient(to right,#34994f, #16db4b);
+}
+
+.formulario {
+    max-width: 480px;
+    height: 480px;
+}
+
+.imagen-login {
+    min-height: 480px;
+    min-width: 480px;
+    max-height: 480px;
+    max-width:480px;
+}
+
+.container{
+    margin-top: 10%;
+}
+
+@media (max-width: 766px) {
+    .imagen-login {
+        display: none;
+    }
+
+    .inicio {
+        margin-right: 120px;
+    }
+}
