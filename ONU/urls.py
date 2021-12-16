@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ONU.views import bienvenida, contenidoExterno, login
+from ONU.views import bienvenida, contenidoExterno, login, main
 
 
 
@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('bienvenida/', bienvenida),
     path('contenido/', contenidoExterno),
-    path('login/', login)
+    path('login/', login),
+    path('main/', main),
 ]
 

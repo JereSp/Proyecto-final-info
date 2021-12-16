@@ -24,3 +24,11 @@ def login(request):
     contexto = Context()
     documento = template.render(contexto)
     return HttpResponse(documento)
+
+def main(request):
+    plantillaMain = open(os.path.join(BASE_DIR,"./templates/main.html"))
+    template = Template(plantillaMain.read())
+    plantillaMain.close()
+    contexto = Context()
+    documento = template.render(contexto)
+    return HttpResponse(documento)
