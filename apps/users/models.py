@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
+from simple_history.models import HistoricalRecords
 
 
 class UserManager(BaseUserManager):
@@ -32,6 +33,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     objects = UserManager()
+    historical = HistoricalRecords()
 
     class Meta:
         verbose_name = 'Usuario'
