@@ -1,12 +1,7 @@
-from rest_framework.response import Response
-from rest_framework.response import Response
-from rest_framework.views import APIView
 from apps.users.models import User
 from apps.users.api.serializers import UserSerializer
+from rest_framework.viewsets import ModelViewSet
 
-class UserAPIView(APIView):
-
-    def get(self,request):
-        users = User.objects.all()
-        users_serializer = UserSerializer(users,many = True)
-        return Response(users_serializer.data)
+class UserAPIView(ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
