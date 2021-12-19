@@ -43,6 +43,7 @@ BASE_APPS = [
 LOCAL_APPS = [
     'ONU',
     'apps.users',
+    'apps.backend'
 ]
 THIRD_APPS = [
     'rest_framework',
