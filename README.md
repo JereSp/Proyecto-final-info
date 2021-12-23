@@ -13,5 +13,8 @@ Comitteen aca chicos no usen master  :D, uwu
 
 * 1- python manage.py createsuperuser
 
+## En etapa de deploy ejecutar lo siguientes comandos
+* `python manage.py makemigrations`
+* `python manage.py migrate --run-syncdb`
 
-
+_Acto seguido eliminar 'migrations' del .gitignore para el posterior deploy_
