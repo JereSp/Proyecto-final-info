@@ -7,7 +7,7 @@ class Posts (models.Model):
     categoria_id = models.ForeignKey(Categorias,on_delete=models.DO_NOTHING)
     title = models.CharField('title',max_length=255)
     date = models.DateField(auto_now= True)
-    content = models.CharField('content',max_length=255)
+    content = models.CharField('content',max_length=510)
     class Meta:
         verbose_name = 'post'
         verbose_name_plural = 'posts'

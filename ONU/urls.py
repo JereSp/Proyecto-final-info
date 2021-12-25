@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from ONU.views import bienvenida, contenidoExterno, login, main
+from ONU.views import bienvenida, contenidoExterno, login, main, posts, postBody
 
 
 
@@ -25,6 +25,8 @@ urlpatterns = [
     path('contenido/', contenidoExterno),
     path('login/', login),
     path('main/', main),
-    path('api/',include('apps.urls'))
+    path('api/',include('apps.urls')),
+    path('posts/', posts, name="home"),
+    path('posts/<int:postid>', postBody),
 ]
 
